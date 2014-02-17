@@ -30,3 +30,6 @@
     - conf
     - varnish
     - http-cache
+
+- include: vcl.yml
+  name: default
