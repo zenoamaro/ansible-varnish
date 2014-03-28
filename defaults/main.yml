@@ -190,7 +190,7 @@ varnish_hash_algorithm:
 varnish_storage_backends:
   default:
     type: malloc
-    options: ['1G']
+    options: ['{{ansible_memtotal_mb}}M']
 
 # The storage backend named "Transient" will be used for transient (short lived)
 # objects. By default Varnish uses an unlimited malloc backend for this.
@@ -573,7 +573,8 @@ varnish_thread_pool_workspace: 65536
 # Too many pools waste CPU and RAM resources, and more than one pool for each
 # CPU is probably detrimal to performance.
 # Can be increased on the fly, but decreases require a restart to take effect.
-varnish_thread_pools: 2
+varnish_thread_pools:
+varnish_thread_pools_per_core: 2
 
 # Worker threads accumulate statistics, and dump these into the global stats
 # counters if the lock is free when they finish a request. This parameters
