@@ -17,7 +17,6 @@ Supported targets:
 - Ubuntu 14.04 LTS "Trusty Tahr"
 - Ubuntu 12.04 LTS "Precise Pangolin"
 - Debian (untested)
-- RedHat (untested)
 
 Installation methods:
 
